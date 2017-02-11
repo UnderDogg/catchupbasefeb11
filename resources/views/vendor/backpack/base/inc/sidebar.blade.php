@@ -16,24 +16,24 @@
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('backpack::base.administration') }}</li>
+            <li class="header">{{ trans('backpack::base.backendistration') }}</li>
             <!-- ================================================ -->
-            <!-- ==== Recommended place for admin menu items ==== -->
+            <!-- ==== Recommended place for backend menu items ==== -->
             <!-- ================================================ -->
-            <li><a href="{{ url('admin/dashboard') }}"><i class="fa fa-dashboard"></i>
+            <li><a href="{{ url('backend/dashboard') }}"><i class="fa fa-dashboard"></i>
                     <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
             <li class="treeview">
                 <a href="#"><i class="fa fa-newspaper-o"></i> <span>News</span> <i
                             class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('admin/category') }}"><i class="fa fa-list"></i> <span>Categories</span></a>
+                    <li><a href="{{ url('backend/category') }}"><i class="fa fa-list"></i> <span>Categories</span></a>
                     </li>
-                    <li><a href="{{ url('admin/tag') }}"><i class="fa fa-tag"></i> <span>Tags</span></a></li>
+                    <li><a href="{{ url('backend/tag') }}"><i class="fa fa-tag"></i> <span>Tags</span></a></li>
                 </ul>
             </li>
 
-            <li><a href="{{ url('admin/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
+            <li><a href="{{ url('backend/menu-item') }}"><i class="fa fa-list"></i> <span>Menu</span></a></li>
 
 
             <!-- Users, Roles Permissions -->
@@ -41,9 +41,9 @@
                 <a href="#"><i class="fa fa-group"></i> <span>Users, Roles, Permissions</span> <i
                             class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('admin/user') }}"><i class="fa fa-user"></i> <span>Users</span></a></li>
-                    <li><a href="{{ url('admin/role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
-                    <li><a href="{{ url('admin/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a>
+                    <li><a href="{{ url('backend/user') }}"><i class="fa fa-user"></i> <span>Users</span></a></li>
+                    <li><a href="{{ url('backend/role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
+                    <li><a href="{{ url('backend/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a>
                     </li>
                 </ul>
             </li>
@@ -52,18 +52,18 @@
             <li class="treeview">
                 <a href="#"><i class="fa fa-cogs"></i> <span>Advanced</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('admin/elfinder') }}"><i class="fa fa-files-o"></i>
+                    <li><a href="{{ url('backend/elfinder') }}"><i class="fa fa-files-o"></i>
                             <span>File manager</span></a></li>
-                    <li><a href="{{ url('admin/backup') }}"><i class="fa fa-hdd-o"></i> <span>Backups</span></a></li>
-                    <li><a href="{{ url('admin/log') }}"><i class="fa fa-terminal"></i> <span>Logs</span></a></li>
-                    <li><a href="{{ url('admin/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                    <li><a href="{{ url('backend/backup') }}"><i class="fa fa-hdd-o"></i> <span>Backups</span></a></li>
+                    <li><a href="{{ url('backend/log') }}"><i class="fa fa-terminal"></i> <span>Logs</span></a></li>
+                    <li><a href="{{ url('backend/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
                 </ul>
             </li>
 
 
             <!-- ======================================= -->
             <li class="header">{{ trans('backpack::base.user') }}</li>
-            <li><a href="{{ url('admin/logout') }}"><i class="fa fa-sign-out"></i>
+            <li><a href="{{ url('backend/logout') }}"><i class="fa fa-sign-out"></i>
                     <span>{{ trans('backpack::base.logout') }}</span></a></li>
         </ul>
     </section>
