@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
+    */
+
+    'name' => 'Laravel',
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -109,6 +121,7 @@ return [
     */
 
     'log' => env('APP_LOG', 'daily'),
+    'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
     /*
     |--------------------------------------------------------------------------
@@ -138,6 +151,11 @@ return [
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Mail\MailServiceProvider::class,
+        /*'Illuminate\Mail\MailServiceProvider',
+        And replace it with:
+        'Postmark\Adapters\LaravelMailProvider',*/
+
+        Illuminate\Notifications\NotificationServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
@@ -147,7 +165,31 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Notifications\NotificationServiceProvider::class,
+
+        /*
+         * Package Service Providers...
+         */
+        Nwidart\Modules\LaravelModulesServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Caffeinated\Flash\FlashServiceProvider::class,
+        Caffeinated\Menus\MenusServiceProvider::class,
+        Caffeinated\Themes\ThemesServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Former\FormerServiceProvider::class,
+        Arcanedev\Settings\SettingsServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Cviebrock\EloquentTaggable\ServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+        Jaybizzle\LaravelCrawlerDetect\LaravelCrawlerDetectServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Maatwebsite\Sidebar\SidebarServiceProvider::class,
+        Stevebauman\Purify\PurifyServiceProvider::class,
+        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class,
+        //YAAP\Theme\ThemeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -212,6 +254,7 @@ return [
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
+        'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
@@ -235,8 +278,32 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
 
         /*
-         * Other Aliases...
+         * Package Facades...
          */
+
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        'Crawler'   => 'Jaybizzle\LaravelCrawlerDetect\Facades\LaravelCrawlerDetect',
+
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
+        'Flash' => Caffeinated\Flash\Facades\Flash::class,
+
+        'Former' => Former\Facades\Former::class,
+
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
+        'Menu' => Caffeinated\Menus\Facades\Menu::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
+
+        'Purify' => Stevebauman\Purify\Facades\Purify::class,
+        'PushNotification' => Davibennun\LaravelPushNotification\Facades\PushNotification::class,
+
+        'Setting' => Arcanedev\Settings\Facades\Setting::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        'Theme' => Caffeinated\Themes\Facades\Theme::class,
+        //'Theme' => YAAP\Theme\Facades\Theme::class
 
     ],
 
